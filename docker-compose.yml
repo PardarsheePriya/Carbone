@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  carbone:
+    image: carbone/carbone-ee:latest
+    platform: linux/amd64
+    ports:
+      - "4000:4000"
+    environment:
+      - CARBONE_EE_STUDIO=true
+      - CARBONE_EE_LICENSE="your_license_here"
+      - LANG=C.UTF-8
+    volumes:
+      - ./templates:/app/templates
+      - ./generated:/app/generated
